@@ -1,7 +1,17 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import * as ROUTES from './constant/route';
+
+const main = lazy(() => import('./pages/main'));
 
 export  default function App(){
   return (
-    <h1 className="py-10">react let's go</h1>
+    <Router>
+      <Suspense fallback={<p>Loading..</p>}>
+        <Switch>
+          <Route path = {ROUTES.MAIN} component = {main} />
+        </Switch>
+      </Suspense>
+    </Router>
   );
 }
