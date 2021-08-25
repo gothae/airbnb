@@ -1,2 +1,2 @@
 export const MAIN = '/';
-export const EXPERIENCESONLINE = '/experiences/online'
+export const EXPERIENCESONLINE = '/experiences_online';
