@@ -1,6 +1,6 @@
 import React from "react";
 import HouseType from "../components/HouseType";
-import Header from "../components/header";
+import Header from "../components/header/index";
 import LinearTravel from "../components/LinearTravel";
 import HostingAD from "../components/HostingAD";
 export default function Main(){
