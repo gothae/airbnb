@@ -1,5 +1,5 @@
 import datas from '../db/data.json'
-export default function Body(){
+export default function LinearTravel(){
     let lst = [
         {
             img : datas.linearTravle.seoul,
@@ -31,16 +31,27 @@ export default function Body(){
             place : '대구광역시',
             desc : '차로 4시간 거리'
         },
+        {
+            img : datas.linearTravle.wanju,
+            place : '완주',
+            desc : '차로 3시간 거리'
+        },
+        {
+            img : datas.linearTravle.junju,
+            place : '전주',
+            desc : '차로 3시간 거리'
+        },
     ]
     return(
-        <div className="body">
-            <h1 className="text-xl">가까운 여행지</h1>
-            <div className="inline-flex">
+        <div className="body w-11/12 mx-auto">
+            <h1 className="text-3xl font-bold">가까운 여행지 둘러보기</h1>
+            <div className="relative grid grid-cols-4 gap-4 mt-6">
             {lst.map((data) => (
                 <card className="">
-                    <img className="w-1/2 rounded-lg" src={data.img}></img>
-                    <h1>{data.place}</h1>
-                    <p>{data.desc}</p>
+                    <button type="button" className="w-1/5 float-left mr-3"><img className="rounded-lg" src={data.img}/></button>
+                    <p className="mt-2 font-bold">{data.place}</p>
+                    <p className="">{data.desc}</p>
+                    
                 </card>
                 ))}
             </div>
