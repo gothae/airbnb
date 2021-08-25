@@ -1,12 +1,14 @@
 import React from "react";
-
+import HouseType from "../components/HouseType";
 import Header from "../components/header/index";
-import Body from "../components/Body";
+import LinearTravel from "../components/LinearTravel";
+
 export default function Main(){
     return(
-        <div className="bg-gray-background">
+        <div className="container mx-auto bg-gray-background ">
             <Header/>
-            <Body/>
+            <LinearTravel/>
+            <HouseType/>
         </div>
     );
 }
