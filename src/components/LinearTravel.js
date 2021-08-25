@@ -55,7 +55,7 @@ export default function LinearTravel(){
                 </card>
                 ))}
             </div>
-            
+            <br/><br/><br/>
         </div>
     )
 }
