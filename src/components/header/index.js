@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as ROUTES from '../../constant/route';
-import LoginForm from "./loginform";
 import Modal from "./modal";
 
 export default function Header(){
@@ -47,7 +46,18 @@ export default function Header(){
                     <li className="font-bold" onClick={openModal}>회원가입</li>
                     <li onClick={openModal}>로그인</li>
                     <Modal open={modalOpen} close={closeModal} header="로그인 또는 회원가입">
-                        <LoginForm/>
+                        <form method="POST" className="align-items-center">
+                            <h1 className="font-bold p-1">에어비앤비에 오신 것을 환영합니다</h1>
+                            <input
+                                className="p-1"
+                                type="text"
+                                placeholder="전화번호"
+                            />
+                            <input 
+                                className = "p-1"
+                                type="submit" 
+                                value="계속" />
+                        </form>
                     </Modal>
                 </ul>
             </div>

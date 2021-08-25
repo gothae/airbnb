@@ -10,12 +10,13 @@ const Modal = (props) => {
         <div className={open ? 'openModal modal' : 'modal'}>
             {open ? (
                 <section>
-                    <header>
+                    <header className="text-center">
                         {header}
                         <button className="close" onClick={close}> &times; </button>
                     </header>
                     <main>
                         {props.children}
+                        {/* form이 children이 됨 */}
                     </main>
                     <footer>
                         <button className="close" onClick={close}> close </button>
