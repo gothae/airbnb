@@ -9,32 +9,101 @@
         "whiteLogo":"https://www.citypng.com/public/uploads/preview/-31600814931hurstjvot8.png",
         "background":"https://a0.muscache.com/im/pictures/0c38042b-8685-4180-8d9b-12a6892ac6d8.jpg?im_q=highq&im_w=720"
     },
-    "linearTravle":{
-        "seoul":"https://a0.muscache.com/im/pictures/71e23854-a3c7-491c-b715-6e86233a293f.jpg?im_q=medq&im_w=720",
-        "busan":"https://a0.muscache.com/im/pictures/be4d3ba5-08d7-4afe-95a7-f2da6453886a.jpg?im_q=medq&im_w=720",
-        "yangyang":"https://a0.muscache.com/im/pictures/7253e011-7c22-48fd-b75d-d0da35372397.jpg?im_q=medq&im_w=720",
-        "sockcho":"https://a0.muscache.com/im/pictures/52e8083e-2de2-446d-a860-534eab250541.jpg?im_q=medq&im_w=720",
-        "jeju":"https://a0.muscache.com/im/pictures/20e74de0-0eb8-4fca-afb8-b111875acdf5.jpg?im_q=medq&im_w=720",
-        "daegu":"https://a0.muscache.com/im/pictures/76e5f1c6-a788-418c-a28b-f0ee29cffd41.jpg?im_q=medq&im_w=720",
-        "wanju":"https://a0.muscache.com/im/pictures/e639b7ab-aee3-48ee-9743-216684a51319.jpg?im_q=medq&im_w=720",
-        "junju":"https://a0.muscache.com/im/pictures/ca3737ef-0faf-46ba-b055-b4a2d99e2cea.jpg?im_q=medq&im_w=720"
-    },
-    "type":{
-        "nature":"https://a0.muscache.com/im/pictures/2f13349d-879d-43c6-83e3-8e5679291d53.jpg?im_w=720",
-        "unordinary":"https://a0.muscache.com/im/pictures/36f53e61-db8d-403c-9122-5b761c0e4264.jpg?im_w=720",
-        "house":"https://a0.muscache.com/im/pictures/7d82ca14-56e5-4465-8218-dcfa7d69b6ac.jpg?im_w=720",
-        "pet":"https://a0.muscache.com/im/pictures/10a638e1-6aff-4313-8033-1275cec83987.jpg?im_w=720"
-    },
-    "hostings":["https://a0.muscache.com/im/pictures/2595054e-d1d9-4fde-8046-58d51fcb3164.jpg?im_w=2560"],
+    "linearTravle":[
+        {
+            "id":1,
+            "img" : "https://a0.muscache.com/im/pictures/71e23854-a3c7-491c-b715-6e86233a293f.jpg?im_q=medq&im_w=720",
+            "place" : "서울특별시",
+            "desc" : "차로 15분 거리"
+        },
+        {
+            "id":2,
+            "img" : "https://a0.muscache.com/im/pictures/7253e011-7c22-48fd-b75d-d0da35372397.jpg?im_q=medq&im_w=720",
+            "place" : "양양군",
+            "desc" : "차로 25분 거리"
+        },
+        {
+            "id":3,
+            "img" : "https://a0.muscache.com/im/pictures/20e74de0-0eb8-4fca-afb8-b111875acdf5.jpg?im_q=medq&im_w=720",
+            "place" : "제주시",
+            "desc" : "차로 7시간 거리"
+        },
+        {
+            "id":4,
+            "img" : "https://a0.muscache.com/im/pictures/be4d3ba5-08d7-4afe-95a7-f2da6453886a.jpg?im_q=medq&im_w=720",
+            "place" : "부산",
+            "desc" : "차로 5시간 거리"
+        },
+        {
+            "id":5,
+            "img" : "https://a0.muscache.com/im/pictures/52e8083e-2de2-446d-a860-534eab250541.jpg?im_q=medq&im_w=720",
+            "place" : "속초시",
+            "desc" : "차로 2.5시간 거리"
+        },
+        {
+            "id":6,
+            "img" : "https://a0.muscache.com/im/pictures/76e5f1c6-a788-418c-a28b-f0ee29cffd41.jpg?im_q=medq&im_w=720",
+            "place" : "대구광역시",
+            "desc" : "차로 4시간 거리"
+        },
+        {
+            "id":7,
+            "img" : "https://a0.muscache.com/im/pictures/e639b7ab-aee3-48ee-9743-216684a51319.jpg?im_q=medq&im_w=720",
+            "place" : "완주",
+            "desc" : "차로 3시간 거리"
+        },
+        {
+            "id":8,
+            "img" : "https://a0.muscache.com/im/pictures/ca3737ef-0faf-46ba-b055-b4a2d99e2cea.jpg?im_q=medq&im_w=720",
+            "place" : "전주",
+            "desc" : "차로 3시간 거리"
+        }
+    ],
+    "type":[
+        {
+            "id":1,
+            "img":"https://a0.muscache.com/im/pictures/2f13349d-879d-43c6-83e3-8e5679291d53.jpg?im_w=720",
+            "desc":"자연생활을 만끽할 수 있는 숙소"
+
+        },
+        {
+            "id":2,
+            "img":"https://a0.muscache.com/im/pictures/36f53e61-db8d-403c-9122-5b761c0e4264.jpg?im_w=720",
+            "desc": "독특한 공간"
+
+        },
+        {
+            "id":3,
+            "img":"https://a0.muscache.com/im/pictures/7d82ca14-56e5-4465-8218-dcfa7d69b6ac.jpg?im_w=720",
+            "desc":"집 전체"
+        },
+        {
+            "id":4,
+            "img":"https://a0.muscache.com/im/pictures/10a638e1-6aff-4313-8033-1275cec83987.jpg?im_w=720",
+            "desc":"반려동물 동반 가능"
+        }
+    ],
+    "hostings":[
+        "https://a0.muscache.com/im/pictures/2595054e-d1d9-4fde-8046-58d51fcb3164.jpg?im_w=2560"
+    ],
     "activity":[
         {
-            "sheep":"https://a0.muscache.com/im/pictures/ad109d56-2421-40cd-98e6-e114160dc85b.jpg?im_w=720"
+            "id": 1,
+            "img":"https://a0.muscache.com/im/pictures/ad109d56-2421-40cd-98e6-e114160dc85b.jpg?im_w=720",
+            "title":"체험",
+            "desc":"가까운 곳에서 즐길 수 있는 잊지 못할 체험을 찾아보세요."
         },
         {
-            "online":"https://a0.muscache.com/im/pictures/0ce799cb-7553-4369-be9e-d0011e0ef636.jpg?im_w=720"
+            "id": 2,
+            "img":"https://a0.muscache.com/im/pictures/0ce799cb-7553-4369-be9e-d0011e0ef636.jpg?im_w=720",
+            "title":"온라인 체험",
+            "desc":"호스트와 실시간으로 소통하면서 액티비티를 즐겨보세요."
         },
         {
-            "olymic":"https://a0.muscache.com/im/pictures/f51f70fb-93b7-4974-86e8-1195b64f1353.jpg?im_w=720"
+            "id" : 3,
+            "img":"https://a0.muscache.com/im/pictures/f51f70fb-93b7-4974-86e8-1195b64f1353.jpg?im_w=720",
+            "title":"올림픽·패럴림픽 출전 선수",
+            "desc":"운동선수가 호스팅하는 온라인 액티비티를 즐겨보세요."
         }
     ]
 

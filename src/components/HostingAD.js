@@ -10,6 +10,7 @@ export default function HostingAD() {
       setImage(data)
     })
   },[])
+  
   return (
     <div className="relative ad w-11/12 mx-auto mt-20 mb-10">
       <img
