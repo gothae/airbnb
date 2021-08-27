@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import * as ROUTES from '../../constant/route';
-import { getAllUser, getUserByUserPhoneNum, userExists } from "../../services/userdb";
+import { createUser,  getUserByUserPhoneNum, userExists } from "../../services/userdb";
 import Modal from "./modal";
 
 export default function Header() {
@@ -25,12 +25,13 @@ export default function Header() {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        const response = await getAllUser();
         const isUserExists = await userExists(userPhoneNum);
 
         if (!isUserExists) {
             // 가입
-
+            const user = {"userphoneNum":userPhoneNum};
+            console.log('user',user);
+            createUser(user);
             // 이동
             history.push(ROUTES.MAIN);
         }else{

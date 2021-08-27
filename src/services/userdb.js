@@ -1,3 +1,6 @@
+import axios from "axios";
+const URL = 'http://localhost:3001';
+
 export async function getAllUser() {
     const result = await fetch(`http://localhost:3001/user`)
         .then(res => {
@@ -30,4 +33,13 @@ export async function userExists(phoneNum) {
         }
     }
     return found;
+}
+
+export async function createUser(user){
+    try{
+        await axios.post(`${URL}/user`,user);
+    }
+    catch(e){
+        throw e;
+    }
 }
