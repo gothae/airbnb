@@ -6,4 +6,6 @@ export async function getUser(){
         .then(data => {
             return data;
         })
+    console.log('result',result);
+    return {result};
 }
