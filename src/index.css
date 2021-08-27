@@ -1,0 +1,22 @@
+.mapStyle{
+    position: fixed;
+    top:5rem;
+    right: 20px;
+    width: 60%;
+    height: 540px;
+}
+
+.self_btn{
+    border: solid 1.5px rgba(0, 0, 0, 0.212);
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+    margin-right: 6px;
+}
+
+.self_btn:hover{
+    border-color: black;
+}
+
+.hint-text{
+    opacity: 60%;
+}
