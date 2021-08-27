@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as ROUTES from '../../constant/route';
@@ -16,6 +17,10 @@ export default function Header(){
     const closeModal = () => {
         setModalOpen(false);
     }
+
+    const items = axios.get('http://localhost:3333/posts').then((item)=>{console.log('item',item.data)})
+    console.log(items);
+    
     return(
         <div className="flex justify-between mt-5">
             <Link to={ROUTES.MAIN}>
