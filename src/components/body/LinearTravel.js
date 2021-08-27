@@ -1,8 +1,16 @@
-import datas from '../db/data.json'
+import { useState,useEffect } from "react"
 export default function LinearTravel(){
-    let lst = [
-        ,
-    ]
+    let [lst,setLst] = useState([])
+    useEffect(() => {
+        fetch(`http://localhost:3001/linearTravle`)
+        .then((res)=>{
+            return res.json()
+        })
+        .then((data)=>{
+            setLst(data)
+        })
+    },[])
+
     return(
         <div className="body w-11/12 mx-auto mt-3">
             <h1 className="text-3xl font-bold">가까운 여행지 둘러보기</h1>

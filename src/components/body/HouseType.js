@@ -1,4 +1,3 @@
-import datas from '../db/data.json'
 import { useState, useEffect } from 'react'
 export default function HouseType(){
 
@@ -23,7 +22,7 @@ export default function HouseType(){
             <div className="relative grid grid-cols-4 gap-3 mt-6">
             {houseType.map((home) => (
                 <div className="card" onClick={function(){
-                    alert('hello')
+                    alert(`${home.desc}`)
                 }} key={home.id}>
                     <button type="button"><img className="rounded-lg" src={home.img}/>
                     <p className="text-left text-lg font-bold">{home.desc}</p>
