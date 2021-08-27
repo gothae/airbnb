@@ -3,6 +3,7 @@ import HouseType from "../components/HouseType";
 import Header from "../components/header/index";
 import LinearTravel from "../components/LinearTravel";
 import HostingAD from "../components/HostingAD";
+import Activity from "../components/Activity";
 export default function Main(){
     return(
         <div className="container mx-auto bg-gray-background ">
@@ -10,6 +11,7 @@ export default function Main(){
             <LinearTravel/>
             <HouseType/>
             <HostingAD/>
+            <Activity/>
         </div>
     );
 }
