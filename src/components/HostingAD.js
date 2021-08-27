@@ -1,10 +1,20 @@
-import datas from "../db/data.json";
+import {useState, useEffect} from 'react'
 export default function HostingAD() {
+  const [image, setImage] = useState()
+  useEffect(() => {
+    fetch(`http://localhost:3001/hostings`)
+    .then(res => {
+      return res.json()
+    })
+    .then(data => {
+      setImage(data)
+    })
+  },[])
   return (
     <div className="relative ad w-11/12 mx-auto mt-20 mb-10">
       <img
         className="object-cover w-full h-88 rounded-lg"
-        src={datas.hosting}
+        src={image}
         title="hello"
       />
       <p className="absolute top-44 left-20 text-5xl font-bold text-white">
