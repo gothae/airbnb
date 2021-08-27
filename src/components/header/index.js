@@ -17,10 +17,16 @@ export default function Header(){
     const closeModal = () => {
         setModalOpen(false);
     }
+    
+    const [users,setUsers] = useState('');
+    const [userPhoneNum, setUserPhoneNum] = useState('');
 
-    async function handleSubmit(){
-        const [{users}] = await getUser();
-        console.log('users',users);
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const response = await getUser();
+        console.log('response',response);
+        setUsers(response);
     }
 
     return(
@@ -67,6 +73,8 @@ export default function Header(){
                                 className="p-1"
                                 type="text"
                                 placeholder="전화번호"
+                                onChange = { ({target}) => setUserPhoneNum(target.value)}
+                                value = {userPhoneNum}
                             />
                             <input 
                                 className = "p-1"
