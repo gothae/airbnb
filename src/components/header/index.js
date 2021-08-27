@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import * as ROUTES from '../../constant/route';
-import { getUser } from "../../services/db";
+import { getAllUser, getUserByUserPhoneNum, userExists } from "../../services/userdb";
 import Modal from "./modal";
 
 export default function Header(){
+    const history = useHistory();
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
         setMenuOpen(menuOpen => !menuOpen)
@@ -18,15 +19,27 @@ export default function Header(){
         setModalOpen(false);
     }
     
-    const [users,setUsers] = useState('');
+    const [user,setUser] = useState('');
     const [userPhoneNum, setUserPhoneNum] = useState('');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        const response = await getUser();
-        console.log('response',response);
-        setUsers(response);
+        const response = await getAllUser();
+
+        const isUserExists = await userExists(userPhoneNum);
+
+        if(!isUserExists){
+            // 가입
+
+            // 이동
+            history.push(ROUTES.MAIN);
+        }else{
+            const response = getUserByUserPhoneNum(userPhoneNum);
+            setUser(response);
+            // 로그인
+            history.push(ROUTES.LOGGEDIN);
+        }
     }
 
     return(
@@ -63,11 +76,7 @@ export default function Header(){
                     <Modal open={modalOpen} close={closeModal} header="로그인 또는 회원가입">
                         <form onSubmit={handleSubmit} method="POST" className="align-items-center">
                             <h1 className="font-bold p-1">에어비앤비에 오신 것을 환영합니다</h1>
-                            <input
-                                type="hidden"
-                                name="userId"
-                                value = "userId"
-                            />
+
                             <input
                                 name = "userPhoneNum"
                                 className="p-1"
