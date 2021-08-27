@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import * as ROUTES from '../../constant/route';
+import { getUser } from "../../services/db";
 import Modal from "./modal";
 
 export default function Header(){
@@ -15,6 +16,11 @@ export default function Header(){
     }
     const closeModal = () => {
         setModalOpen(false);
+    }
+
+    async function handleSubmit(){
+        const [{users}] = await getUser();
+        console.log('users',users);
     }
 
     return(
@@ -49,9 +55,15 @@ export default function Header(){
                     <li className="font-bold" onClick={openModal}>회원가입</li>
                     <li onClick={openModal}>로그인</li>
                     <Modal open={modalOpen} close={closeModal} header="로그인 또는 회원가입">
-                        <form method="POST" className="align-items-center">
+                        <form onSubmit={handleSubmit} method="POST" className="align-items-center">
                             <h1 className="font-bold p-1">에어비앤비에 오신 것을 환영합니다</h1>
                             <input
+                                type="hidden"
+                                name="userId"
+                                value = "userId"
+                            />
+                            <input
+                                name = "userPhoneNum"
                                 className="p-1"
                                 type="text"
                                 placeholder="전화번호"
