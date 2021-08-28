@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ExperiencesOnline(){
     useEffect(() =>{
-        document.title = 'experiences_online';
+        document.title = 'Airbnb';
     },[]);
 
     return (
