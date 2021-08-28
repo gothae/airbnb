@@ -47,16 +47,18 @@ export default function Header() {
     }
 
     return (
-        <div className="flex justify-between mt-5">
+        <div className="flex justify-between" >
             <Link to={ROUTES.MAIN}>
                 <img src="./images/airbnb_logo.png" alt="airbnb_logo" width={100} height={100} />
             </Link>
-            <span>숙소 </span>
-            <span>체험 </span>
-            <Link to={ROUTES.EXPERIENCESONLINE}>
-                <span>온라인 체험 </span>
-            </Link>
-            <span>호스트 되기 </span>
+            <div className="font-bold mx-10">
+                <span>숙소 </span>
+                <span>체험 </span>
+                <Link to={ROUTES.EXPERIENCESONLINE}>
+                    <span>온라인 체험 </span>
+                </Link>
+                <span className="ml-52">호스트 되기 </span>
+            </div>
             <div>
                 <button
                     type="button"
