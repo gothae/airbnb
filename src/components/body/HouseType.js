@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 export default function HouseType(){
 
     let [houseType, setHouseType] = useState([])
+    let history = useHistory()
     useEffect(()=> {
         fetch(`http://localhost:3001/type`)
         .then(
@@ -21,9 +23,7 @@ export default function HouseType(){
             <h1 className="text-3xl font-bold">어디에서나, 여행은 살아보는 거야!</h1>
             <div className="relative grid grid-cols-4 gap-3 mt-6">
             {houseType.map((home) => (
-                <div className="card" onClick={function(){
-                    alert(`${home.desc}`)
-                }} key={home.id}>
+                <div className="card" onClick={() => history.push('/maps')} key={home.id}>
                     <button type="button"><img className="rounded-lg" src={home.img}/>
                     <p className="text-left text-lg font-bold">{home.desc}</p>
                     </button>
@@ -33,5 +33,4 @@ export default function HouseType(){
             </div>
         </div>
     )
-
 }
