@@ -36,10 +36,12 @@ export async function userExists(phoneNum) {
 }
 
 export async function createUser(user){
-    try{
-        await axios.post(`${URL}/user`,user);
-    }
-    catch(e){
-        throw e;
-    }
+    const result = 
+    {
+        method : "POST",
+        body : JSON.stringify(user),
+        headers : {"Content-type" : "application/json; charset=UTF-8"}
+    };
+    fetch(`${URL}/user`,result)
+    .then(response => response.json())
 }
