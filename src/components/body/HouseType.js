@@ -33,5 +33,4 @@ export default function HouseType(){
             </div>
         </div>
     )
-
 }

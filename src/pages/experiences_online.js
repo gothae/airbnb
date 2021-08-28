@@ -6,7 +6,6 @@ export default function ExperiencesOnline(){
         document.title = 'experiences_online';
     },[]);
 
-    console.log('hi');
     return (
         <div className="">
             <h1>온라인 체험</h1>
