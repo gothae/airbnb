@@ -1,4 +1,3 @@
-import axios from "axios";
 const URL = 'http://localhost:3001';
 
 export async function getAllUser() {
@@ -17,6 +16,7 @@ export async function getUserByUserPhoneNum(userPhoneNum) {
     for (var i = 0; i < userArray.result.length; i++) {
         if (userPhoneNum === userArray.result[i].userPhoneNum) {
             var user = userArray.result[i];
+            console.log('user',user);
             break
         }
     }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import * as ROUTES from '../../constant/route';
-import { createUser,  getUserByUserPhoneNum, userExists } from "../../services/userdb";
+import { createUser,  getAllUser,  getUserByUserPhoneNum, userExists } from "../../services/userdb";
 import Modal from "./modal";
 
 export default function Header() {
@@ -21,6 +21,7 @@ export default function Header() {
 
     const [user, setUser] = useState('');
     const [userPhoneNum, setUserPhoneNum] = useState('');
+    const [userId,setUserId] = useState('');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -29,8 +30,9 @@ export default function Header() {
 
         if (!isUserExists) {
             // 가입
-            const user = {"userphoneNum":userPhoneNum};
-            console.log('user',user);
+            // const user = {"userphoneNum":userPhoneNum};
+            const userlen = getAllUser().length;
+            const user = {"userPhoneNum":userPhoneNum, "id":userlen+1}
             createUser(user);
             // 이동
             history.push(ROUTES.MAIN);
@@ -38,8 +40,9 @@ export default function Header() {
             const response = getUserByUserPhoneNum(userPhoneNum);
             setUser(response);
             setUserPhoneNum(userPhoneNum);
+
             // 로그인
-            history.push(`/${userPhoneNum}`)
+            history.push(`/user/${userPhoneNum}`)
         }
     }
 
