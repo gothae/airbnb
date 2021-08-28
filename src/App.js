@@ -6,7 +6,7 @@ const main = lazy(() => import('./pages/main'));
 const experiencesOnline = lazy(() => import('./pages/experiences_online'));
 const maps = lazy(() => import('./pages/maps'))
 const loggedin = lazy(() => import('./pages/loggedin'));
-
+//서버 json - server--watch./ src / db / data.json--port 3001
 export  default function App(){
   return (
     <Router>
