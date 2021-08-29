@@ -5,7 +5,11 @@ module.exports = {
     colors : {
       red : "#EF4444"
     },
-    extend: {},
+    extend: {
+      backgroundImage : theme => ({
+        'hero' : "url('/images/airbnb_bg.jpeg')"
+      })
+    },
   },
   variants: {
     extend: {},

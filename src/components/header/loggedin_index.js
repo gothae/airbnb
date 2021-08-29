@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import * as ROUTES from '../../constant/route';
-import useUser from "../../services/use-user";
-import { createUser, getAllUser, getUserByUserPhoneNum, userExists } from "../../services/userdb";
 
 export default function Header() {
-    const history = useHistory();
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
         setMenuOpen(menuOpen => !menuOpen)

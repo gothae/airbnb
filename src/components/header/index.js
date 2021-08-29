@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import * as ROUTES from '../../constant/route';
 import { createUser,  getAllUser,  getUserByUserPhoneNum, userExists } from "../../services/userdb";
@@ -97,6 +97,7 @@ export default function Header() {
                     </Modal>
                 </ul>
             </div>
+            <p className="bg-auto bg-hero"></p>
         </div>
     );
 }
