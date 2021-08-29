@@ -30,7 +30,6 @@ export default function Header() {
 
         if (!isUserExists) {
             // 가입
-            // const user = {"userphoneNum":userPhoneNum};
             const userlen = getAllUser().length;
             const user = {"userPhoneNum":userPhoneNum, "id":userlen+1}
             createUser(user);
@@ -40,22 +39,21 @@ export default function Header() {
             const response = getUserByUserPhoneNum(userPhoneNum);
             setUser(response);
             setUserPhoneNum(userPhoneNum);
-
             // 로그인
             history.push(`/user/${userPhoneNum}`)
         }
     }
 
     return (
-        <div className="flex justify-between" >
+        <div className="flex justify-between mt-10">
             <Link to={ROUTES.MAIN}>
                 <img src="./images/airbnb_logo.png" alt="airbnb_logo" width={100} height={100} />
             </Link>
             <div className="font-bold mx-10">
-                <span>숙소 </span>
-                <span>체험 </span>
+                <span className="mx-10">숙소 </span>
+                <span className="mx-10">체험 </span>
                 <Link to={ROUTES.EXPERIENCESONLINE}>
-                    <span>온라인 체험 </span>
+                    <span className="mx-10">온라인 체험 </span>
                 </Link>
                 <span className="ml-52">호스트 되기 </span>
             </div>

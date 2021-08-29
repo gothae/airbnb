@@ -3,3 +3,7 @@ export const EXPERIENCESONLINE = '/experiences_online';
 export const MAPS = '/maps';
 export const LOGGEDIN = '/user/:userPhoneNum';
 export const NOTFOUND = '/not-found';
+export const MESSAGE = '/guest/inbox';
+export const NOTIFICATIONS = '/notifications';
+export const TRIPS = '/trips/v1';
+export const WISHLIST = '/wishlists';
