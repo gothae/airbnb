@@ -26,11 +26,13 @@ export  default function App(){
           <Route path='/signup'>
             <Signup/>
           </Route>
-          <Route component={notfound}/>
           <Route path={ROUTES.MESSAGE} component={message} />
           <Route path={ROUTES.NOTIFICATIONS} component={notifications} />
           <Route path={ROUTES.TRIPS} component={trips} />
           <Route path={ROUTES.WISHLIST} component={wishlist} />
+          
+          <Route component={notfound}/>
+
         </Switch>
       </Suspense>
     </Router>
