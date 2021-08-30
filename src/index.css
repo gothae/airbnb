@@ -30,7 +30,9 @@
     color: #eee;
 }
 .bg-airbnb_main{
-  background-image: url('./backgroundimage/airbnb_bg.jpeg');
+  background-image: url('./backgroundimage/airbnb_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .inner{
