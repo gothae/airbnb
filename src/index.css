@@ -29,3 +29,6 @@
 .horizon{
     color: #eee;
 }
+.bg-airbnb_main{
+  background-image: url('./backgroundimage/airbnb_bg.jpeg');
+}
