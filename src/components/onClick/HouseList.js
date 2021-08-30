@@ -15,7 +15,31 @@ export default function HouseList(){
             {hList.map(house=>(
                 <div>
                     <hr className="mt-5 horizon"/>
-                    <img className="listImg rounded-lg mt-5 float-left" src={house.img[0]}></img>
+                    <div className="picList">
+                        <div className="inner">
+                            <img className="listImg rounded-lg mt-5" src={house.img[0]}></img>
+                        </div>
+                        <div className="inner">
+                            <img className="listImg rounded-lg mt-5" src={house.img[1]}></img>
+                        </div>
+                        <div className="inner">
+                            <img className="listImg rounded-lg mt-5" src={house.img[2]}></img>
+                        </div>
+                        <div className="inner">
+                            <img className="listImg rounded-lg mt-5" src={house.img[3]}></img>
+                        </div>
+                        <div className="inner">
+                            <img className="listImg rounded-lg mt-5" src={house.img[4]}></img>
+                        </div>
+                        <div className="inner">
+                            <img className="listImg rounded-lg mt-5" src={house.img[5]}></img>
+                        </div>
+                        <div className="inner">
+                            <img className="listImg rounded-lg mt-5" src={house.img[6]}></img>
+                        </div>
+                        
+                    </div>
+                    
                     <div className="words mt-4">
                         <p>{house.sub}</p>
                         <p>{house.title}</p>

@@ -9,6 +9,7 @@ export default function Maps() {
       center: new kakao.maps.LatLng(37.365264512305174, 127.10676860117488),
       level: 3,
     };
+    
 
     var map = new kakao.maps.Map(container, options);
     var markerPosition = new kakao.maps.LatLng(
@@ -23,6 +24,15 @@ export default function Maps() {
 
   const [btn,setBtn] = useState(['취소 수수료 없음','숙소 유형','요금','즉시 예약','필터 추가하기'])
 
+  let [count,setCount] = useState(0)
+  const maxLength = 7
+  function slide(){
+    setCount(count+1)
+    if(count === maxLength){
+      setTimeout(()=>{
+      })
+    }
+  }
 
   return (
     <div>

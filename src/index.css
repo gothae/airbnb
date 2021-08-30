@@ -32,3 +32,11 @@
 .bg-airbnb_main{
   background-image: url('./backgroundimage/airbnb_bg.jpeg');
 }
+
+.inner{
+    float : left;
+}
+
+.picList{
+    width: 300vw;
+}
