@@ -7,14 +7,6 @@
     {
       "userPhoneNum": "01056368254",
       "id": 2
-    },
-    {
-      "userphoneNum": "123",
-      "id": 3
-    },
-    {
-      "userPhoneNum": "123",
-      "id": 4
     }
   ],
   "airbnb": {
@@ -116,13 +108,13 @@
       "desc": "운동선수가 호스팅하는 온라인 액티비티를 즐겨보세요."
     }
   ],
-  "houses":[
+  "houses": [
     {
-      "id":1,
-      "title":"시티뷰 + 배달음식 + 넷플릭스 = 사랑입니다 ʕ•ﻌ•ʔ ♡",
-      "sub":"충무로의 레지던스 전체",
-      "desc":"최대 인원 2명, · 침실 1개, · 침대 1개, · 욕실 1개",
-      "img":[
+      "id": 1,
+      "title": "시티뷰 + 배달음식 + 넷플릭스 = 사랑입니다 ʕ•ﻌ•ʔ ♡",
+      "sub": "충무로의 레지던스 전체",
+      "desc": "최대 인원 2명, · 침실 1개, · 침대 1개, · 욕실 1개",
+      "img": [
         "https://a0.muscache.com/im/pictures/miso/Hosting-48318134/original/e964ec50-39bc-4f21-932f-14d7d2f3b558.jpeg?im_w=1200",
         "https://a0.muscache.com/im/pictures/miso/Hosting-48318134/original/b7df9ade-804b-4f35-b951-c3ba5ffb4b55.jpeg?im_w=720",
         "https://a0.muscache.com/im/pictures/miso/Hosting-48060212/original/ba0ec75b-29a8-4858-8f1d-eeaaf594df52.jpeg?im_w=720",

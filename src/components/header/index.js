@@ -8,12 +8,15 @@ export default function Header() {
     const history = useHistory();
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
-        setMenuOpen(menuOpen => !menuOpen)
+        setMenuOpen(!menuOpen)
     }
 
     const [modalOpen, setModalOpen] = useState(false);
     const openModal = () => {
         setModalOpen(true);
+        let status = menuOpen
+        status = false
+        setMenuOpen(status);
     }
     const closeModal = () => {
         setModalOpen(false);
@@ -35,12 +38,14 @@ export default function Header() {
             createUser(user);
             // 이동
             history.push(ROUTES.MAIN);
+            closeModal()
         }else{
             const response = getUserByUserPhoneNum(userPhoneNum);
             setUser(response);
             setUserPhoneNum(userPhoneNum);
             // 로그인
-            history.push(`/user/${userPhoneNum}`);
+            history.push(ROUTES.MAIN);
+            closeModal()
         }
     }
 
@@ -74,11 +79,12 @@ export default function Header() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </button>
-                <ul className={menuOpen ? "block" : "hidden"}>
+                <ul className="Login" style={{display : menuOpen?"block":"none"}}>
                     <li className="font-bold" onClick={openModal}>회원가입</li>
                     <li onClick={openModal}>로그인</li>
-                    <Modal open={modalOpen} close={closeModal} header="로그인 또는 회원가입">
-                        <form onSubmit={handleSubmit} method="POST" className="align-items-center">
+                </ul>
+                <Modal open={modalOpen} close={closeModal} header="로그인 또는 회원가입">
+                        <form onSubmit={handleSubmit} method="GET" className="align-items-center">
                             <h1 className="font-bold p-1">에어비앤비에 오신 것을 환영합니다</h1>
 
                             <input
@@ -94,8 +100,7 @@ export default function Header() {
                                 type="submit"
                                 value="계속" />
                         </form>
-                    </Modal>
-                </ul>
+                </Modal>
             </div>
             <p className="bg-auto bg-hero"></p>
         </div>
