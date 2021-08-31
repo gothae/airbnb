@@ -7,11 +7,12 @@ export default function useUser(){
     const user = useContext(UserContext);
     useEffect(() => {
         async function getUserObjByUserId() {
+            console.log('user',user);
             const [reponse] = await getUserByUserPhoneNum(user.userPhoneNum);
             console.log('response',reponse);
             setActiveUser(reponse);
         }
-        if (user?.userPhoneNum) {
+        if (true) {
             getUserObjByUserId();
         }
     }, [user]);
