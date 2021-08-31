@@ -4,7 +4,8 @@ import LoggedInHeader from "../components/header/loggedin_index";
 import LinearTravel from "../components/body/LinearTravel";
 import HostingAD from "../components/body/HostingAD";
 import Activity from "../components/body/Activity";
-export default function Loggedin(){
+export default function Loggedin({user}){
+    console.log('user',user);
     return(
         <div className="container mx-auto bg-gray-background ">
             <LoggedInHeader/>

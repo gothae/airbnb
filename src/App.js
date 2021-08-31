@@ -26,7 +26,7 @@ export  default function App(){
             <Route exact path={ROUTES.MAIN} component={main} />
             <Route path={ROUTES.EXPERIENCESONLINE} component={experiencesOnline} />
             <Route path={ROUTES.MAPS} component={maps}/>
-            <Route path={ROUTES.LOGGEDIN} component={loggedin}/>
+            <Route path={ROUTES.LOGGEDIN} component={loggedin} user={user}/>
             <Route path='/signup'>
               <Signup/>
             </Route>
