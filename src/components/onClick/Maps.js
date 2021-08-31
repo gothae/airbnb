@@ -26,13 +26,7 @@ export default function Maps() {
 
   let [count,setCount] = useState(0)
   const maxLength = 7
-  function slide(){
-    setCount(count+1)
-    if(count === maxLength){
-      setTimeout(()=>{
-      })
-    }
-  }
+  
 
   return (
     <div>
