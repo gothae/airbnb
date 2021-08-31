@@ -18,3 +18,14 @@ export default function useUser(){
 
     return { user: activeUser };
 }
+
+// export default function useUser(){
+//     const [activeUser, setActiveuser] = useState('');
+//     const user = useContext(UserContext);
+
+//     useEffect(() => {
+//         async function getUser(){
+
+//         }
+//     })
+// }
