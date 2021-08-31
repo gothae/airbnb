@@ -19,6 +19,7 @@ export async function getUserByUserPhoneNum(userPhoneNum) {
             break
         }
     }
+    console.log('user',user);
     return user;
 }
 
